@@ -1,25 +1,23 @@
 <template>
 	<div class="layout">
-		<div class="content">
-			<mu-appbar title="Oasis" class="appnav">
-				<mu-icon-button @click="toggleNav" icon="menu" slot="left"/>
-				<mu-flat-button label="expand_more" slot="right"/>
-				<mu-icon-button icon="expand_more" slot="right"/>
-			</mu-appbar>
-		</div>
+		<mu-appbar title="Oasis" :zDepth="0" class="appnav" :class="{'nav-hide': !open}">
+			<mu-icon-button @click="toggleNav" icon="menu" slot="left"/>
+			<mu-flat-button label="expand_more" slot="right"/>
+			<mu-icon-button icon="expand_more" slot="right"/>
+		</mu-appbar>
 		<mu-drawer :open="open" class="sidemenu" :zDepth="1">
 			<mu-appbar title="Oasis">
 			</mu-appbar>
 			<mu-divider/>
 			<div class="sidemenu-content">
 				<mu-list>
-					<mu-list-item title="Test">
-					</mu-list-item>
-					<mu-list-item title="Test2">
-					</mu-list-item>
+					<mu-list-item title="Test" />
+					<mu-list-item title="Test2" />
 				</mu-list>
 			</div>
 		</mu-drawer>
+		<div class="content">
+		</div>
 	</div>
 </template>
 <script>
@@ -44,7 +42,7 @@ export default {
 .layout {
 }
 
-.appnav {
+.mu-appbar.appnav {
 	position: fixed;
 	left: 256px;
 	right: 0;
@@ -63,10 +61,10 @@ export default {
 }
 
 .sidemenu {
-//	width: 256px;
-}
-
-.sidemenu.mu-appbar {
-	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	&.mu-appbar {
+		flex-shrink: 0;
+	}
 }
 </style>

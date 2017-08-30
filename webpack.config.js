@@ -1,5 +1,5 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path');
+const webpack = require('webpack');
 
 const museUiThemePath = path.join(
 	__dirname,
@@ -24,18 +24,18 @@ module.exports = {
 	module: {
 		loaders: [
 			{
+				test: /muse-ui.src.*?js$/,
+				loader: 'babel-loader'
+			},
+			{
 				test: /\.js$/,
 				loaders: [ 'babel-loader' ],
 				exclude: /node_modules/,
 				include: __dirname
 			},
 			{
-				test: /muse-ui.src.*?js$/,
-				loader: 'babel-loader'
-			},
-			{
-				test: /\.css$/,
-				loader: 'css-loader'
+				test: /\.less$/,
+				loader: 'style-loader!css-loader!less-loader'
 			},
 			{
 				test: /\.vue$/,
