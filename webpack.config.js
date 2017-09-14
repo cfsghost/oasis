@@ -5,7 +5,7 @@ const museUiThemePath = path.join(
 	__dirname,
 	'node_modules',
 	'muse-ui',
-	'src/styles/themes/variables/light.less'
+	'src/styles/themes/light.less'
 );
 
 module.exports = {

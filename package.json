@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/cfsghost/oasis#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "config": "^1.26.2",

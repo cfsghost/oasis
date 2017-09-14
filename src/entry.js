@@ -11,6 +11,7 @@ import iconbutton from 'muse-components/iconButton';
 import divider from 'muse-components/divider';
 import list from 'muse-components/list/list';
 import listItem from 'muse-components/list/listItem';
+import badge from 'muse-components/badge';
 
 Vue.use(MuseUI);
 Vue.component(appbar.name, appbar);
@@ -21,6 +22,7 @@ Vue.component(iconbutton.name, iconbutton);
 Vue.component(list.name, list);
 Vue.component(listItem.name, listItem);
 Vue.component(divider.name, divider);
+Vue.component(badge.name, badge);
 
 // Customized components
 import App from './views/App.vue';
