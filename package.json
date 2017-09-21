@@ -29,7 +29,7 @@
     "config": "^1.26.2",
     "css-loader": "^0.28.5",
     "engined": "0.0.4",
-    "engined-http": "0.0.9",
+    "engined-http": "0.0.10",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "muse-ui": "^2.1.0",
